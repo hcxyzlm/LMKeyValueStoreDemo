@@ -15,6 +15,7 @@
 		AE94BA9120591DBC007DBEB2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AE94BA8F20591DBC007DBEB2 /* LaunchScreen.storyboard */; };
 		AE94BA9420591DBC007DBEB2 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = AE94BA9320591DBC007DBEB2 /* main.m */; };
 		AE94BA9D2059293B007DBEB2 /* LMWCDBOperation.mm in Sources */ = {isa = PBXBuildFile; fileRef = AE94BA9B2059293A007DBEB2 /* LMWCDBOperation.mm */; };
+		AE94BAA220595C7E007DBEB2 /* LMKeyValueItem.mm in Sources */ = {isa = PBXBuildFile; fileRef = AE94BA9F20595C7D007DBEB2 /* LMKeyValueItem.mm */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,6 +34,9 @@
 		AE94BA9B2059293A007DBEB2 /* LMWCDBOperation.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = LMWCDBOperation.mm; sourceTree = "<group>"; };
 		AE94BA9C2059293B007DBEB2 /* LMWCDBOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LMWCDBOperation.h; sourceTree = "<group>"; };
 		AE94BA9E20592BF0007DBEB2 /* LMLog.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LMLog.h; sourceTree = "<group>"; };
+		AE94BA9F20595C7D007DBEB2 /* LMKeyValueItem.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = LMKeyValueItem.mm; sourceTree = "<group>"; };
+		AE94BAA020595C7D007DBEB2 /* LMKeyValueItem+WCTTableCoding.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "LMKeyValueItem+WCTTableCoding.h"; sourceTree = "<group>"; };
+		AE94BAA120595C7E007DBEB2 /* LMKeyValueItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LMKeyValueItem.h; sourceTree = "<group>"; };
 		DC062827F6DD440124348381 /* libPods-LMKeyValueStoreDemo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-LMKeyValueStoreDemo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -97,6 +101,9 @@
 			children = (
 				AE94BA9C2059293B007DBEB2 /* LMWCDBOperation.h */,
 				AE94BA9B2059293A007DBEB2 /* LMWCDBOperation.mm */,
+				AE94BAA120595C7E007DBEB2 /* LMKeyValueItem.h */,
+				AE94BA9F20595C7D007DBEB2 /* LMKeyValueItem.mm */,
+				AE94BAA020595C7D007DBEB2 /* LMKeyValueItem+WCTTableCoding.h */,
 				AE94BA9E20592BF0007DBEB2 /* LMLog.h */,
 			);
 			path = LMKeyValueStore;
@@ -238,6 +245,7 @@
 				AE94BA9D2059293B007DBEB2 /* LMWCDBOperation.mm in Sources */,
 				AE94BA8920591DBC007DBEB2 /* ViewController.m in Sources */,
 				AE94BA9420591DBC007DBEB2 /* main.m in Sources */,
+				AE94BAA220595C7E007DBEB2 /* LMKeyValueItem.mm in Sources */,
 				AE94BA8620591DBC007DBEB2 /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
