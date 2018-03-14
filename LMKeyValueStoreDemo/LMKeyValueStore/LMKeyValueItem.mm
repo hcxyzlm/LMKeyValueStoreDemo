@@ -17,4 +17,8 @@ WCDB_SYNTHESIZE_COLUMN(LMKeyValueItem, itemId,"id")
 WCDB_SYNTHESIZE_COLUMN(LMKeyValueItem, itemObject, "json")
 WCDB_SYNTHESIZE_COLUMN(LMKeyValueItem, createdTime, "createdTime")
 
+
+- (NSString *)description {
+    return [NSString stringWithFormat:@"id=%@, value=%@, createTime=%@", _itemId, _itemObject, _createdTime];
+}
 @end

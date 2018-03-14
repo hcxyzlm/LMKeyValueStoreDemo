@@ -16,6 +16,7 @@
 		AE94BA9420591DBC007DBEB2 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = AE94BA9320591DBC007DBEB2 /* main.m */; };
 		AE94BA9D2059293B007DBEB2 /* LMWCDBOperation.mm in Sources */ = {isa = PBXBuildFile; fileRef = AE94BA9B2059293A007DBEB2 /* LMWCDBOperation.mm */; };
 		AE94BAA220595C7E007DBEB2 /* LMKeyValueItem.mm in Sources */ = {isa = PBXBuildFile; fileRef = AE94BA9F20595C7D007DBEB2 /* LMKeyValueItem.mm */; };
+		AE94BAA520595CEC007DBEB2 /* LMKeyValueStore.mm in Sources */ = {isa = PBXBuildFile; fileRef = AE94BAA420595CEC007DBEB2 /* LMKeyValueStore.mm */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,6 +38,8 @@
 		AE94BA9F20595C7D007DBEB2 /* LMKeyValueItem.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = LMKeyValueItem.mm; sourceTree = "<group>"; };
 		AE94BAA020595C7D007DBEB2 /* LMKeyValueItem+WCTTableCoding.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "LMKeyValueItem+WCTTableCoding.h"; sourceTree = "<group>"; };
 		AE94BAA120595C7E007DBEB2 /* LMKeyValueItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LMKeyValueItem.h; sourceTree = "<group>"; };
+		AE94BAA320595CEC007DBEB2 /* LMKeyValueStore.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LMKeyValueStore.h; sourceTree = "<group>"; };
+		AE94BAA420595CEC007DBEB2 /* LMKeyValueStore.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = LMKeyValueStore.mm; sourceTree = "<group>"; };
 		DC062827F6DD440124348381 /* libPods-LMKeyValueStoreDemo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-LMKeyValueStoreDemo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -105,6 +108,8 @@
 				AE94BA9F20595C7D007DBEB2 /* LMKeyValueItem.mm */,
 				AE94BAA020595C7D007DBEB2 /* LMKeyValueItem+WCTTableCoding.h */,
 				AE94BA9E20592BF0007DBEB2 /* LMLog.h */,
+				AE94BAA320595CEC007DBEB2 /* LMKeyValueStore.h */,
+				AE94BAA420595CEC007DBEB2 /* LMKeyValueStore.mm */,
 			);
 			path = LMKeyValueStore;
 			sourceTree = "<group>";
@@ -242,6 +247,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AE94BAA520595CEC007DBEB2 /* LMKeyValueStore.mm in Sources */,
 				AE94BA9D2059293B007DBEB2 /* LMWCDBOperation.mm in Sources */,
 				AE94BA8920591DBC007DBEB2 /* ViewController.m in Sources */,
 				AE94BA9420591DBC007DBEB2 /* main.m in Sources */,
