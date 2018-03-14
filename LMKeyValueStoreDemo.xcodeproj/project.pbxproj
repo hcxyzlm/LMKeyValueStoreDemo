@@ -7,15 +7,19 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5B8F56357636D6B0BBC2A2E1 /* libPods-LMKeyValueStoreDemo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DC062827F6DD440124348381 /* libPods-LMKeyValueStoreDemo.a */; };
 		AE94BA8620591DBC007DBEB2 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = AE94BA8520591DBC007DBEB2 /* AppDelegate.m */; };
 		AE94BA8920591DBC007DBEB2 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AE94BA8820591DBC007DBEB2 /* ViewController.m */; };
 		AE94BA8C20591DBC007DBEB2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AE94BA8A20591DBC007DBEB2 /* Main.storyboard */; };
 		AE94BA8E20591DBC007DBEB2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AE94BA8D20591DBC007DBEB2 /* Assets.xcassets */; };
 		AE94BA9120591DBC007DBEB2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AE94BA8F20591DBC007DBEB2 /* LaunchScreen.storyboard */; };
 		AE94BA9420591DBC007DBEB2 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = AE94BA9320591DBC007DBEB2 /* main.m */; };
+		AE94BA9D2059293B007DBEB2 /* LMWCDBOperation.mm in Sources */ = {isa = PBXBuildFile; fileRef = AE94BA9B2059293A007DBEB2 /* LMWCDBOperation.mm */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		25F094AB14219297FC491EBB /* Pods-LMKeyValueStoreDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LMKeyValueStoreDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-LMKeyValueStoreDemo/Pods-LMKeyValueStoreDemo.release.xcconfig"; sourceTree = "<group>"; };
+		2CE7D6252AD6F7ADF7C1D8B6 /* Pods-LMKeyValueStoreDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LMKeyValueStoreDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LMKeyValueStoreDemo/Pods-LMKeyValueStoreDemo.debug.xcconfig"; sourceTree = "<group>"; };
 		AE94BA8120591DBC007DBEB2 /* LMKeyValueStoreDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LMKeyValueStoreDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AE94BA8420591DBC007DBEB2 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		AE94BA8520591DBC007DBEB2 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -26,6 +30,10 @@
 		AE94BA9020591DBC007DBEB2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AE94BA9220591DBC007DBEB2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AE94BA9320591DBC007DBEB2 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		AE94BA9B2059293A007DBEB2 /* LMWCDBOperation.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = LMWCDBOperation.mm; sourceTree = "<group>"; };
+		AE94BA9C2059293B007DBEB2 /* LMWCDBOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LMWCDBOperation.h; sourceTree = "<group>"; };
+		AE94BA9E20592BF0007DBEB2 /* LMLog.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LMLog.h; sourceTree = "<group>"; };
+		DC062827F6DD440124348381 /* libPods-LMKeyValueStoreDemo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-LMKeyValueStoreDemo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,17 +41,29 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5B8F56357636D6B0BBC2A2E1 /* libPods-LMKeyValueStoreDemo.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4902BDCEFB80A327CF43ECCB /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				2CE7D6252AD6F7ADF7C1D8B6 /* Pods-LMKeyValueStoreDemo.debug.xcconfig */,
+				25F094AB14219297FC491EBB /* Pods-LMKeyValueStoreDemo.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		AE94BA7820591DBC007DBEB2 = {
 			isa = PBXGroup;
 			children = (
 				AE94BA8320591DBC007DBEB2 /* LMKeyValueStoreDemo */,
 				AE94BA8220591DBC007DBEB2 /* Products */,
+				4902BDCEFB80A327CF43ECCB /* Pods */,
+				EBB4BC887B4E0BBAC619584C /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -75,8 +95,19 @@
 		AE94BA9A20591DE5007DBEB2 /* LMKeyValueStore */ = {
 			isa = PBXGroup;
 			children = (
+				AE94BA9C2059293B007DBEB2 /* LMWCDBOperation.h */,
+				AE94BA9B2059293A007DBEB2 /* LMWCDBOperation.mm */,
+				AE94BA9E20592BF0007DBEB2 /* LMLog.h */,
 			);
 			path = LMKeyValueStore;
+			sourceTree = "<group>";
+		};
+		EBB4BC887B4E0BBAC619584C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				DC062827F6DD440124348381 /* libPods-LMKeyValueStoreDemo.a */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -86,9 +117,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = AE94BA9720591DBC007DBEB2 /* Build configuration list for PBXNativeTarget "LMKeyValueStoreDemo" */;
 			buildPhases = (
+				6A8FEC0E8D483DCDFADA617F /* [CP] Check Pods Manifest.lock */,
 				AE94BA7D20591DBC007DBEB2 /* Sources */,
 				AE94BA7E20591DBC007DBEB2 /* Frameworks */,
 				AE94BA7F20591DBC007DBEB2 /* Resources */,
+				29722071067CA4FF2B4FF745 /* [CP] Embed Pods Frameworks */,
+				F35BC8054F8599052C2B0B5E /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -145,11 +179,63 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		29722071067CA4FF2B4FF745 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-LMKeyValueStoreDemo/Pods-LMKeyValueStoreDemo-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6A8FEC0E8D483DCDFADA617F /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-LMKeyValueStoreDemo-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F35BC8054F8599052C2B0B5E /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-LMKeyValueStoreDemo/Pods-LMKeyValueStoreDemo-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		AE94BA7D20591DBC007DBEB2 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AE94BA9D2059293B007DBEB2 /* LMWCDBOperation.mm in Sources */,
 				AE94BA8920591DBC007DBEB2 /* ViewController.m in Sources */,
 				AE94BA9420591DBC007DBEB2 /* main.m in Sources */,
 				AE94BA8620591DBC007DBEB2 /* AppDelegate.m in Sources */,
@@ -284,6 +370,7 @@
 		};
 		AE94BA9820591DBC007DBEB2 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2CE7D6252AD6F7ADF7C1D8B6 /* Pods-LMKeyValueStoreDemo.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -297,6 +384,7 @@
 		};
 		AE94BA9920591DBC007DBEB2 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 25F094AB14219297FC491EBB /* Pods-LMKeyValueStoreDemo.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
