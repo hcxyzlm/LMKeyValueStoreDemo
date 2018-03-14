@@ -31,7 +31,7 @@
 - (void)deleteAllCacheByTableName:(NSString *)tableName;
 
 // 清楚缓存，这里并不是删除缓存，只是把缓存时间改成null值
-- (void)markCacheExpiredWithKey:(NSString *)cacheKey;
+- (void)markCacheExpiredById:(NSString *)stringId fromTable:(NSString *)tableName;
 
 // 检查缓存是否过期，一般是24小时
 -(BOOL)checkCacheValidById:(NSString *)stringId fromTable:(NSString *)tableName cacheDate:(NSTimeInterval)cacheDate;
