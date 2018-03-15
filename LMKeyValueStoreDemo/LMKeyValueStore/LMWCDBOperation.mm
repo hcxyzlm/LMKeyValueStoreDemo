@@ -13,7 +13,6 @@
 
 @interface LMWCDBOperation ()
 
-@property (nonatomic, strong) NSString *dbFilePath;
 @property (nonatomic, strong, readwrite) WCTDatabase *dbDatabase;
 
 @end
@@ -33,7 +32,7 @@
     if (self) {
         NSString * dbPath = [PATH_OF_DOCUMENT stringByAppendingPathComponent:dbName];
         self.dbDatabase = [[WCTDatabase alloc] initWithPath:dbPath];
-        LMLog(@"database file path [%@]", _dbFilePath);
+        LMLog(@"database file path [%@]", dbPath);
         NSAssert(self.dbDatabase != nil , @"error dbDatabase create failed");
 
     }
@@ -45,7 +44,7 @@
     self = [super init];
     if (self) {
         self.dbDatabase = [[WCTDatabase alloc] initWithPath:dbPath];
-        LMLog(@"database file path [%@]", _dbFilePath);
+        LMLog(@"database file path [%@]", dbPath);
         NSAssert(self.dbDatabase != nil , @"error dbDatabase create failed");
         
     }
