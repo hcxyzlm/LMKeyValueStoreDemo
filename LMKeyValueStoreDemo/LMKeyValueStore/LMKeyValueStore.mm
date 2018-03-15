@@ -19,7 +19,7 @@
 
 @implementation LMKeyValueStore
 + (BOOL)checkString:(NSString *)string {
-    if (string == nil || string.length == 0 || [string rangeOfString:@" "].location != NSNotFound) {
+    if (string == nil || string.length == 0) {
        
         return NO;
     }
@@ -27,11 +27,19 @@
 }
 
 + (BOOL)checkTableName:(NSString *)tableName {
-    if (![LMKeyValueStore checkString:tableName] ){
-        LMLog(@"ERROR, table name: %@ format error.", tableName);
+    if (tableName == nil || tableName.length == 0 || [tableName rangeOfString:@" "].location != NSNotFound) {
+        
         return NO;
     }
     return YES;
+}
+
+#pragma mark init
+- (instancetype)init {
+    if (self = [super init]) {
+        self.dbOperation = [LMWCDBOperation shareOperation];
+    }
+    return self;
 }
 
 #pragma mark public
@@ -42,7 +50,7 @@
     if ([self isTableExists:tableName]) {
         return;
     }
-    BOOL result = [self.dbOperation.dbDatabase createVirtualTableOfName:tableName withClass:[LMKeyValueItem class] ];
+    BOOL result = [self.dbOperation.dbDatabase createTableAndIndexesOfName:tableName withClass:[LMKeyValueItem class] ];
     if (!result) {
         LMLog(@"ERROR, table name: %@ create failued", tableName);
         return;
@@ -104,6 +112,10 @@
         return nil;
     }
     if ([LMKeyValueStore checkString:stringId] == NO) {
+        return nil;
+    }
+    
+    if (![self isTableExists:tableName]) {
         return nil;
     }
     
