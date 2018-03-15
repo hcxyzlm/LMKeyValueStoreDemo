@@ -11,6 +11,7 @@
 		AE6B438E205A0B4D0036C9AB /* LMKeyValueDemoTabVC.m in Sources */ = {isa = PBXBuildFile; fileRef = AE6B438D205A0B4D0036C9AB /* LMKeyValueDemoTabVC.m */; };
 		AE6B4391205A0B8F0036C9AB /* LMKeyValueDemoTabVCModel.m in Sources */ = {isa = PBXBuildFile; fileRef = AE6B4390205A0B8F0036C9AB /* LMKeyValueDemoTabVCModel.m */; };
 		AE6B4394205A0FFA0036C9AB /* LMRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = AE6B4393205A0FFA0036C9AB /* LMRequest.m */; };
+		AE6B43E6205AB9560036C9AB /* LMKeyValueStoreDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = AE6B43E5205AB9560036C9AB /* LMKeyValueStoreDemoTests.m */; };
 		AE94BA8620591DBC007DBEB2 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = AE94BA8520591DBC007DBEB2 /* AppDelegate.m */; };
 		AE94BA8920591DBC007DBEB2 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AE94BA8820591DBC007DBEB2 /* ViewController.m */; };
 		AE94BA8C20591DBC007DBEB2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AE94BA8A20591DBC007DBEB2 /* Main.storyboard */; };
@@ -23,14 +24,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		AE6B439E205A588B0036C9AB /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = AE94BA7920591DBC007DBEB2 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = AE94BA8020591DBC007DBEB2;
-			remoteInfo = LMKeyValueStoreDemo;
-		};
-		AE6B43C4205AB6C30036C9AB /* PBXContainerItemProxy */ = {
+		AE6B43E0205AB9320036C9AB /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = AE94BA7920591DBC007DBEB2 /* Project object */;
 			proxyType = 1;
@@ -48,8 +42,9 @@
 		AE6B4390205A0B8F0036C9AB /* LMKeyValueDemoTabVCModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LMKeyValueDemoTabVCModel.m; sourceTree = "<group>"; };
 		AE6B4392205A0FFA0036C9AB /* LMRequest.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LMRequest.h; sourceTree = "<group>"; };
 		AE6B4393205A0FFA0036C9AB /* LMRequest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LMRequest.m; sourceTree = "<group>"; };
-		AE6B4399205A588B0036C9AB /* LMKeyValueStoreDemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LMKeyValueStoreDemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		AE6B43BF205AB6C30036C9AB /* LMKeyValueStoreDemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LMKeyValueStoreDemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		AE6B43DB205AB9320036C9AB /* LMKeyValueStoreDemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LMKeyValueStoreDemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		AE6B43DF205AB9320036C9AB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AE6B43E5205AB9560036C9AB /* LMKeyValueStoreDemoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = LMKeyValueStoreDemoTests.m; path = ../../../LMKeyValueStoreDemoTests.m; sourceTree = "<group>"; };
 		AE94BA8120591DBC007DBEB2 /* LMKeyValueStoreDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LMKeyValueStoreDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AE94BA8420591DBC007DBEB2 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		AE94BA8520591DBC007DBEB2 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -72,14 +67,7 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		AE6B4396205A588B0036C9AB /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		AE6B43BC205AB6C30036C9AB /* Frameworks */ = {
+		AE6B43D8205AB9320036C9AB /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -106,10 +94,20 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		AE6B43DC205AB9320036C9AB /* LMKeyValueStoreDemoTests */ = {
+			isa = PBXGroup;
+			children = (
+				AE6B43E5205AB9560036C9AB /* LMKeyValueStoreDemoTests.m */,
+				AE6B43DF205AB9320036C9AB /* Info.plist */,
+			);
+			path = LMKeyValueStoreDemoTests;
+			sourceTree = "<group>";
+		};
 		AE94BA7820591DBC007DBEB2 = {
 			isa = PBXGroup;
 			children = (
 				AE94BA8320591DBC007DBEB2 /* LMKeyValueStoreDemo */,
+				AE6B43DC205AB9320036C9AB /* LMKeyValueStoreDemoTests */,
 				AE94BA8220591DBC007DBEB2 /* Products */,
 				4902BDCEFB80A327CF43ECCB /* Pods */,
 				EBB4BC887B4E0BBAC619584C /* Frameworks */,
@@ -120,8 +118,7 @@
 			isa = PBXGroup;
 			children = (
 				AE94BA8120591DBC007DBEB2 /* LMKeyValueStoreDemo.app */,
-				AE6B4399205A588B0036C9AB /* LMKeyValueStoreDemoUITests.xctest */,
-				AE6B43BF205AB6C30036C9AB /* LMKeyValueStoreDemoTests.xctest */,
+				AE6B43DB205AB9320036C9AB /* LMKeyValueStoreDemoTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -183,40 +180,22 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		AE6B4398205A588B0036C9AB /* LMKeyValueStoreDemoUITests */ = {
+		AE6B43DA205AB9320036C9AB /* LMKeyValueStoreDemoTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = AE6B43A2205A588B0036C9AB /* Build configuration list for PBXNativeTarget "LMKeyValueStoreDemoUITests" */;
+			buildConfigurationList = AE6B43E2205AB9320036C9AB /* Build configuration list for PBXNativeTarget "LMKeyValueStoreDemoTests" */;
 			buildPhases = (
-				AE6B4395205A588B0036C9AB /* Sources */,
-				AE6B4396205A588B0036C9AB /* Frameworks */,
-				AE6B4397205A588B0036C9AB /* Resources */,
+				AE6B43D7205AB9320036C9AB /* Sources */,
+				AE6B43D8205AB9320036C9AB /* Frameworks */,
+				AE6B43D9205AB9320036C9AB /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				AE6B439F205A588B0036C9AB /* PBXTargetDependency */,
-			);
-			name = LMKeyValueStoreDemoUITests;
-			productName = LMKeyValueStoreDemoUITests;
-			productReference = AE6B4399205A588B0036C9AB /* LMKeyValueStoreDemoUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
-		};
-		AE6B43BE205AB6C30036C9AB /* LMKeyValueStoreDemoTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = AE6B43C8205AB6C30036C9AB /* Build configuration list for PBXNativeTarget "LMKeyValueStoreDemoTests" */;
-			buildPhases = (
-				AE6B43BB205AB6C30036C9AB /* Sources */,
-				AE6B43BC205AB6C30036C9AB /* Frameworks */,
-				AE6B43BD205AB6C30036C9AB /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				AE6B43C5205AB6C30036C9AB /* PBXTargetDependency */,
+				AE6B43E1205AB9320036C9AB /* PBXTargetDependency */,
 			);
 			name = LMKeyValueStoreDemoTests;
 			productName = LMKeyValueStoreDemoTests;
-			productReference = AE6B43BF205AB6C30036C9AB /* LMKeyValueStoreDemoTests.xctest */;
+			productReference = AE6B43DB205AB9320036C9AB /* LMKeyValueStoreDemoTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 		AE94BA8020591DBC007DBEB2 /* LMKeyValueStoreDemo */ = {
@@ -248,12 +227,7 @@
 				LastUpgradeCheck = 0920;
 				ORGANIZATIONNAME = zhuo;
 				TargetAttributes = {
-					AE6B4398205A588B0036C9AB = {
-						CreatedOnToolsVersion = 9.2;
-						ProvisioningStyle = Automatic;
-						TestTargetID = AE94BA8020591DBC007DBEB2;
-					};
-					AE6B43BE205AB6C30036C9AB = {
+					AE6B43DA205AB9320036C9AB = {
 						CreatedOnToolsVersion = 9.2;
 						ProvisioningStyle = Automatic;
 						TestTargetID = AE94BA8020591DBC007DBEB2;
@@ -278,21 +252,13 @@
 			projectRoot = "";
 			targets = (
 				AE94BA8020591DBC007DBEB2 /* LMKeyValueStoreDemo */,
-				AE6B4398205A588B0036C9AB /* LMKeyValueStoreDemoUITests */,
-				AE6B43BE205AB6C30036C9AB /* LMKeyValueStoreDemoTests */,
+				AE6B43DA205AB9320036C9AB /* LMKeyValueStoreDemoTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		AE6B4397205A588B0036C9AB /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		AE6B43BD205AB6C30036C9AB /* Resources */ = {
+		AE6B43D9205AB9320036C9AB /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -363,17 +329,11 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		AE6B4395205A588B0036C9AB /* Sources */ = {
+		AE6B43D7205AB9320036C9AB /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		AE6B43BB205AB6C30036C9AB /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
+				AE6B43E6205AB9560036C9AB /* LMKeyValueStoreDemoTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -396,15 +356,10 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		AE6B439F205A588B0036C9AB /* PBXTargetDependency */ = {
+		AE6B43E1205AB9320036C9AB /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = AE94BA8020591DBC007DBEB2 /* LMKeyValueStoreDemo */;
-			targetProxy = AE6B439E205A588B0036C9AB /* PBXContainerItemProxy */;
-		};
-		AE6B43C5205AB6C30036C9AB /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = AE94BA8020591DBC007DBEB2 /* LMKeyValueStoreDemo */;
-			targetProxy = AE6B43C4205AB6C30036C9AB /* PBXContainerItemProxy */;
+			targetProxy = AE6B43E0205AB9320036C9AB /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -428,33 +383,7 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		AE6B43A0205A588B0036C9AB /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = LMKeyValueStoreDemoUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.lrts.www.LMKeyValueStoreDemoUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = LMKeyValueStoreDemo;
-			};
-			name = Debug;
-		};
-		AE6B43A1205A588B0036C9AB /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = LMKeyValueStoreDemoUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.lrts.www.LMKeyValueStoreDemoUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = LMKeyValueStoreDemo;
-			};
-			name = Release;
-		};
-		AE6B43C6205AB6C30036C9AB /* Debug */ = {
+		AE6B43E3205AB9320036C9AB /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -468,7 +397,7 @@
 			};
 			name = Debug;
 		};
-		AE6B43C7205AB6C30036C9AB /* Release */ = {
+		AE6B43E4205AB9320036C9AB /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -617,20 +546,11 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		AE6B43A2205A588B0036C9AB /* Build configuration list for PBXNativeTarget "LMKeyValueStoreDemoUITests" */ = {
+		AE6B43E2205AB9320036C9AB /* Build configuration list for PBXNativeTarget "LMKeyValueStoreDemoTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				AE6B43A0205A588B0036C9AB /* Debug */,
-				AE6B43A1205A588B0036C9AB /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		AE6B43C8205AB6C30036C9AB /* Build configuration list for PBXNativeTarget "LMKeyValueStoreDemoTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				AE6B43C6205AB6C30036C9AB /* Debug */,
-				AE6B43C7205AB6C30036C9AB /* Release */,
+				AE6B43E3205AB9320036C9AB /* Debug */,
+				AE6B43E4205AB9320036C9AB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
