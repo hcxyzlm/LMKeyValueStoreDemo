@@ -12,6 +12,8 @@
 #import "LMRequest.h"
 #import "LMKeyValueStore.h"
 
+NSString *const keyDatabaseName = @"LMKeyValueStore.db";
+
 #define kDefaultCacheTime (24 * 60 * 60) // 默认的一天缓存时间
 static NSString * const keyStoreTableName = @"KeyValueTable";
 
@@ -23,7 +25,7 @@ static NSString * const keyStoreTableName = @"KeyValueTable";
 
 - (instancetype ) init {
     if (self = [super init]) {
-        _storeHelper = [[LMKeyValueStore alloc] init];
+        _storeHelper = [[LMKeyValueStore alloc] initDBWithName:keyDatabaseName];
     }
     
     return self;

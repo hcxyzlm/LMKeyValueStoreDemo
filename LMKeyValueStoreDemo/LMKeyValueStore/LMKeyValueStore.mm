@@ -13,8 +13,6 @@
 #import "LMKeyValueItem.h"
 #import "LMKeyValueItem+WCTTableCoding.h"
 
-NSString *const keyDatabaseName = @"LMKeyValueStore.db";
-
 @interface LMKeyValueStore ()
 @property (nonatomic, strong) LMWCDBOperation *dbOperation; //数据库句柄
 @end
@@ -36,10 +34,20 @@ NSString *const keyDatabaseName = @"LMKeyValueStore.db";
     return YES;
 }
 
-#pragma mark init
-- (instancetype)init {
-    if (self = [super init]) {
-        self.dbOperation = [[LMWCDBOperation alloc] initDBWithName:keyDatabaseName];
+- (instancetype )initDBWithName:(NSString *)dbName {
+    self = [super init];
+    if (self) {
+        self.dbOperation = [[LMWCDBOperation alloc] initDBWithName:dbName];
+        
+    }
+    return self;
+    
+}
+
+- (instancetype )initWithDBWithPath:(NSString *)dbPath {
+    self = [super init];
+    if (self) {
+        self.dbOperation = [[LMWCDBOperation alloc] initWithDBWithPath:dbPath];
     }
     return self;
 }

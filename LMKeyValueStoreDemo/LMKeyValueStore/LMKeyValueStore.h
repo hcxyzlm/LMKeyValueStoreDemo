@@ -10,6 +10,15 @@
 
 @interface LMKeyValueStore : NSObject
 
+- (nullable instancetype)init UNAVAILABLE_ATTRIBUTE;
+
++ (nullable instancetype)new UNAVAILABLE_ATTRIBUTE;
+
+- (instancetype )initDBWithName:(NSString *)dbName;
+
+- (instancetype )initWithDBWithPath:(NSString *)dbPath;
+
+
 - (void)createTableWithName:(NSString *)tableName;
 
 - (BOOL)isTableExists:(NSString *)tableName;
