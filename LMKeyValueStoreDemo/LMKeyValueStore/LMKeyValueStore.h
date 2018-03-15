@@ -7,7 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
-
+NS_ASSUME_NONNULL_BEGIN
 @interface LMKeyValueStore : NSObject
 
 - (nullable instancetype)init UNAVAILABLE_ATTRIBUTE;
@@ -46,3 +46,4 @@
 -(BOOL)checkCacheValidById:(NSString *)stringId fromTable:(NSString *)tableName cacheDate:(NSTimeInterval)cacheDate;
 
 @end
+NS_ASSUME_NONNULL_END
