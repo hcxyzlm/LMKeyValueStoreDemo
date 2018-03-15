@@ -9,18 +9,18 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-extern NSString *const keyDatabaseName;
-
 @class WCTDatabase;
 @interface LMWCDBOperation : NSObject
 
 @property (nonatomic, strong, readonly) WCTDatabase *dbDatabase;
 
-+ (nonnull instancetype)shareOperation;
-
 - (nullable instancetype)init UNAVAILABLE_ATTRIBUTE;
 
 + (nullable instancetype)new UNAVAILABLE_ATTRIBUTE;
+
+- (instancetype )initDBWithName:(NSString *)dbName;
+
+- (instancetype )initWithDBWithPath:(NSString *)dbPath;
 
 #pragma mark insert
 - (BOOL)insertObject:(NSObject *)object

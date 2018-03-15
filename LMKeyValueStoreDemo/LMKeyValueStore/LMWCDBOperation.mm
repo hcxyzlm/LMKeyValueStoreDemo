@@ -9,9 +9,7 @@
 #import <WCDB/WCDB.h>
 #import "LMLog.h"
 
-
-
-NSString *const keyDatabaseName = @"LMKeyValueStore.db";
+#define PATH_OF_DOCUMENT    [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) objectAtIndex:0]
 
 @interface LMWCDBOperation ()
 
@@ -29,48 +27,30 @@ NSString *const keyDatabaseName = @"LMKeyValueStore.db";
     [self.dbDatabase close];
 }
 
-#pragma mark - Getter & Setter
-
-- (NSString *)dbFilePath {
-    if (nil == _dbFilePath) {
-        NSString *documentsPath = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) objectAtIndex:0];
-        _dbFilePath = [documentsPath stringByAppendingPathComponent:keyDatabaseName];
-        LMLog(@"database file path [%@]", _dbFilePath);
-    }
-    
-    return _dbFilePath;
-}
-
 #pragma mark - Public
+- (instancetype )initDBWithName:(NSString *)dbName {
+    self = [super init];
+    if (self) {
+        NSString * dbPath = [PATH_OF_DOCUMENT stringByAppendingPathComponent:dbName];
+        self.dbDatabase = [[WCTDatabase alloc] initWithPath:dbPath];
+        LMLog(@"database file path [%@]", _dbFilePath);
+        NSAssert(self.dbDatabase != nil , @"error dbDatabase create failed");
 
-+ (nonnull instancetype)shareOperation {
-    
-    static id sharedInstance = nil;
-    static dispatch_once_t onceToken;
-    dispatch_once(&onceToken, ^{
-        sharedInstance = [[self alloc] init];
-    });
-    return sharedInstance;
+    }
+    return self;
     
 }
 
-- (instancetype)init {
-    if (self = [super init]) {
-        self.dbDatabase = [[WCTDatabase alloc] initWithPath:self.dbFilePath];
-        if (!self.dbDatabase) {
-            return nil;
-        }
-#if DEBUG_DATABASE
-        [WCTStatistics SetGlobalSQLTrace:^(NSString *sql) {
-            LMLog(@"SQL: %@", sql);
-        }];
-#endif
+- (instancetype )initWithDBWithPath:(NSString *)dbPath {
+    self = [super init];
+    if (self) {
+        self.dbDatabase = [[WCTDatabase alloc] initWithPath:dbPath];
+        LMLog(@"database file path [%@]", _dbFilePath);
+        NSAssert(self.dbDatabase != nil , @"error dbDatabase create failed");
         
     }
-    
     return self;
 }
-
 #pragma mark public
 
 - (BOOL)insertObject:(NSObject *)object

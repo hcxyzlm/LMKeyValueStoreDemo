@@ -13,6 +13,8 @@
 #import "LMKeyValueItem.h"
 #import "LMKeyValueItem+WCTTableCoding.h"
 
+NSString *const keyDatabaseName = @"LMKeyValueStore.db";
+
 @interface LMKeyValueStore ()
 @property (nonatomic, strong) LMWCDBOperation *dbOperation; //数据库句柄
 @end
@@ -37,7 +39,7 @@
 #pragma mark init
 - (instancetype)init {
     if (self = [super init]) {
-        self.dbOperation = [LMWCDBOperation shareOperation];
+        self.dbOperation = [[LMWCDBOperation alloc] initDBWithName:keyDatabaseName];
     }
     return self;
 }
@@ -104,7 +106,7 @@
     keyValueItem.itemId = objectId;
     keyValueItem.itemObject = string;
     keyValueItem.createdTime = [NSDate date];
-    [[LMWCDBOperation shareOperation].dbDatabase insertObject:keyValueItem into:tableName];
+    [self.dbOperation.dbDatabase insertObject:keyValueItem into:tableName];
 }
 
 - (NSString *)getCacheStringById:(NSString *)stringId fromTable:(NSString *)tableName {
@@ -119,7 +121,7 @@
         return nil;
     }
     
-    LMKeyValueItem *keyValueItem = [[LMWCDBOperation shareOperation].dbDatabase getOneObjectOfClass:[LMKeyValueItem class] fromTable:tableName where:LMKeyValueItem.itemId == stringId];
+    LMKeyValueItem *keyValueItem = [self.dbOperation.dbDatabase getOneObjectOfClass:[LMKeyValueItem class] fromTable:tableName where:LMKeyValueItem.itemId == stringId];
     
     return keyValueItem.itemObject;
 }
@@ -132,7 +134,7 @@
         return nil;
     }
     
-    LMKeyValueItem *keyValueItem = [[LMWCDBOperation shareOperation].dbDatabase getOneObjectOfClass:[LMKeyValueItem class] fromTable:tableName where:LMKeyValueItem.itemId == stringId];
+    LMKeyValueItem *keyValueItem = [self.dbOperation.dbDatabase getOneObjectOfClass:[LMKeyValueItem class] fromTable:tableName where:LMKeyValueItem.itemId == stringId];
     return keyValueItem;
     
 }
