@@ -39,8 +39,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 - (void)deleteAllCacheByTableName:(NSString *)tableName;
 
-// 清楚缓存，这里并不是删除缓存，只是把缓存时间改成null值
-- (void)markCacheExpiredById:(NSString *)stringId fromTable:(NSString *)tableName;
+// 清除缓存，这里并不是删除缓存，只是把缓存时间改成null值
+- (void)makeCacheExpiredById:(NSString *)stringId fromTable:(NSString *)tableName;
 
 // 检查缓存是否过期，一般是24小时
 -(BOOL)checkCacheValidById:(NSString *)stringId fromTable:(NSString *)tableName cacheDate:(NSTimeInterval)cacheDate;

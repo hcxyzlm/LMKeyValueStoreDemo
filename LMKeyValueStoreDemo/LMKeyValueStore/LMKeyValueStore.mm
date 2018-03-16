@@ -164,7 +164,7 @@
     [self.dbOperation.dbDatabase deleteAllObjectsFromTable:tableName];
 }
 
-- (void)markCacheExpiredById:(NSString *)stringId fromTable:(NSString *)tableName {
+- (void)makeCacheExpiredById:(NSString *)stringId fromTable:(NSString *)tableName {
     if ([LMKeyValueStore checkTableName:tableName] == NO) {
         return ;
     }
