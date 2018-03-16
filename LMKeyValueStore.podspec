@@ -78,7 +78,7 @@ Pod::Spec.new do |s|
   #  Supports git, hg, bzr, svn and HTTP.
   #
 
-  s.source       = { :git => "http://hcxyzlm/LMKeyValueStore.git", :tag => "{s.v1.0.0}" }
+  s.source       = { :git => "http://hcxyzlm/LMKeyValueStore.git", :tag => "#{s.version}" }
 
 
   # ――― Source Code ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
@@ -89,8 +89,8 @@ Pod::Spec.new do |s|
   #  Not including the public_header_files will make all headers public.
   #
 
-  s.source_files  = "Classes", "LMKeyValueStoreDemo/LMKeyValueStore/*.{h,m,m}"
-  #s.exclude_files = "Classes/Exclude"
+  s.source_files  = "Classes", "LMKeyValueStoreDemo/LMKeyValueStore/*.{h,m}"
+  s.exclude_files = "Classes/Exclude"
 
   # s.public_header_files = "Classes/**/*.h"
 
