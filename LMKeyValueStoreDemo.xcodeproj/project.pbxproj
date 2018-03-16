@@ -106,7 +106,6 @@
 		AE94BA7820591DBC007DBEB2 = {
 			isa = PBXGroup;
 			children = (
-				AE94BA9A20591DE5007DBEB2 /* LMKeyValueStore */,
 				AE94BA8320591DBC007DBEB2 /* LMKeyValueStoreDemo */,
 				AE6B3A9D205B5C91002B435A /* LMKeyValueStoreDemoTests */,
 				AE94BA8220591DBC007DBEB2 /* Products */,
@@ -128,6 +127,7 @@
 			isa = PBXGroup;
 			children = (
 				AE94BAA620597930007DBEB2 /* LMKeyValueDemo */,
+				AE94BA9A20591DE5007DBEB2 /* LMKeyValueStore */,
 				AE94BA8420591DBC007DBEB2 /* AppDelegate.h */,
 				AE94BA8520591DBC007DBEB2 /* AppDelegate.m */,
 				AE94BA8720591DBC007DBEB2 /* ViewController.h */,
