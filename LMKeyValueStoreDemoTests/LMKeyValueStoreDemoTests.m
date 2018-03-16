@@ -8,6 +8,8 @@
 
 #import <XCTest/XCTest.h>
 #import "LMKeyValueStore.h"
+#import "LMWCDBOperation.h"
+#import "LMKeyValueItem.h"
 
 @interface LMKeyValueStoreDemoTests : XCTestCase
 
@@ -50,6 +52,29 @@
     
     // delete all objcet
     [store deleteAllCacheByTableName:tableName];
+}
+
+- (void)testWCDBOpertaion {
+    LMWCDBOperation *storeHelper = [[LMWCDBOperation alloc] initDBWithName:@"test.db"];
+    NSString *tableName = @"test_table";
+    LMKeyValueItem *item = [[LMKeyValueItem alloc] init];
+    item.itemId = @"key1";
+    item.itemObject = @"abc";
+    item.createdTime = [NSDate date];
+    
+    // insert
+    [storeHelper insertObject:item into:tableName];
+    
+    // select
+    LMKeyValueItem *result = [storeHelper getOneObjectOfClass:[LMKeyValueItem class] fromTable:tableName bandingColumnName:@"id" realID:item.itemId];
+    
+    // modification
+    item.itemObject = @"def";
+    // bandingColumnName为oc的mm文件绑定到数据库的字段
+    [storeHelper updateObjectInTable:tableName withObject:item bandingColumnName:@"id" realID:item.itemId];
+    
+    // delete
+    [storeHelper deleteObjectFromTable:tableName bandingColumnName:@"id" realID:item.itemId];
 }
 
 - (void)testPerformanceExample {
