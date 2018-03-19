@@ -11,7 +11,6 @@
 		AE6B3A9F205B5C91002B435A /* LMKeyValueStoreDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = AE6B3A9E205B5C91002B435A /* LMKeyValueStoreDemoTests.m */; };
 		AE6B438E205A0B4D0036C9AB /* LMKeyValueDemoTabVC.m in Sources */ = {isa = PBXBuildFile; fileRef = AE6B438D205A0B4D0036C9AB /* LMKeyValueDemoTabVC.m */; };
 		AE6B4391205A0B8F0036C9AB /* LMKeyValueDemoTabVCModel.m in Sources */ = {isa = PBXBuildFile; fileRef = AE6B4390205A0B8F0036C9AB /* LMKeyValueDemoTabVCModel.m */; };
-		AE6B4394205A0FFA0036C9AB /* LMRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = AE6B4393205A0FFA0036C9AB /* LMRequest.m */; };
 		AE94BA8620591DBC007DBEB2 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = AE94BA8520591DBC007DBEB2 /* AppDelegate.m */; };
 		AE94BA8920591DBC007DBEB2 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AE94BA8820591DBC007DBEB2 /* ViewController.m */; };
 		AE94BA8C20591DBC007DBEB2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AE94BA8A20591DBC007DBEB2 /* Main.storyboard */; };
@@ -21,6 +20,7 @@
 		AE94BA9D2059293B007DBEB2 /* LMWCDBOperation.mm in Sources */ = {isa = PBXBuildFile; fileRef = AE94BA9B2059293A007DBEB2 /* LMWCDBOperation.mm */; };
 		AE94BAA220595C7E007DBEB2 /* LMKeyValueItem.mm in Sources */ = {isa = PBXBuildFile; fileRef = AE94BA9F20595C7D007DBEB2 /* LMKeyValueItem.mm */; };
 		AE94BAA520595CEC007DBEB2 /* LMKeyValueStore.mm in Sources */ = {isa = PBXBuildFile; fileRef = AE94BAA420595CEC007DBEB2 /* LMKeyValueStore.mm */; };
+		AEDE505C205F81E9007BA78E /* LMRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = AEDE505B205F81E9007BA78E /* LMRequest.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,8 +43,6 @@
 		AE6B438D205A0B4D0036C9AB /* LMKeyValueDemoTabVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LMKeyValueDemoTabVC.m; sourceTree = "<group>"; };
 		AE6B438F205A0B8F0036C9AB /* LMKeyValueDemoTabVCModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LMKeyValueDemoTabVCModel.h; sourceTree = "<group>"; };
 		AE6B4390205A0B8F0036C9AB /* LMKeyValueDemoTabVCModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LMKeyValueDemoTabVCModel.m; sourceTree = "<group>"; };
-		AE6B4392205A0FFA0036C9AB /* LMRequest.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LMRequest.h; sourceTree = "<group>"; };
-		AE6B4393205A0FFA0036C9AB /* LMRequest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LMRequest.m; sourceTree = "<group>"; };
 		AE94BA8120591DBC007DBEB2 /* LMKeyValueStoreDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LMKeyValueStoreDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AE94BA8420591DBC007DBEB2 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		AE94BA8520591DBC007DBEB2 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -63,6 +61,8 @@
 		AE94BAA120595C7E007DBEB2 /* LMKeyValueItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LMKeyValueItem.h; sourceTree = "<group>"; };
 		AE94BAA320595CEC007DBEB2 /* LMKeyValueStore.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LMKeyValueStore.h; sourceTree = "<group>"; };
 		AE94BAA420595CEC007DBEB2 /* LMKeyValueStore.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = LMKeyValueStore.mm; sourceTree = "<group>"; };
+		AEDE505A205F81E9007BA78E /* LMRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LMRequest.h; path = LMKeyValueDemo/LMRequest.h; sourceTree = "<group>"; };
+		AEDE505B205F81E9007BA78E /* LMRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LMRequest.m; path = LMKeyValueDemo/LMRequest.m; sourceTree = "<group>"; };
 		DC062827F6DD440124348381 /* libPods-LMKeyValueStoreDemo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-LMKeyValueStoreDemo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -106,6 +106,7 @@
 		AE94BA7820591DBC007DBEB2 = {
 			isa = PBXGroup;
 			children = (
+				AE94BA9A20591DE5007DBEB2 /* LMKeyValueStore */,
 				AE94BA8320591DBC007DBEB2 /* LMKeyValueStoreDemo */,
 				AE6B3A9D205B5C91002B435A /* LMKeyValueStoreDemoTests */,
 				AE94BA8220591DBC007DBEB2 /* Products */,
@@ -126,8 +127,12 @@
 		AE94BA8320591DBC007DBEB2 /* LMKeyValueStoreDemo */ = {
 			isa = PBXGroup;
 			children = (
-				AE94BAA620597930007DBEB2 /* LMKeyValueDemo */,
-				AE94BA9A20591DE5007DBEB2 /* LMKeyValueStore */,
+				AEDE505A205F81E9007BA78E /* LMRequest.h */,
+				AEDE505B205F81E9007BA78E /* LMRequest.m */,
+				AE6B438C205A0B4D0036C9AB /* LMKeyValueDemoTabVC.h */,
+				AE6B438D205A0B4D0036C9AB /* LMKeyValueDemoTabVC.m */,
+				AE6B438F205A0B8F0036C9AB /* LMKeyValueDemoTabVCModel.h */,
+				AE6B4390205A0B8F0036C9AB /* LMKeyValueDemoTabVCModel.m */,
 				AE94BA8420591DBC007DBEB2 /* AppDelegate.h */,
 				AE94BA8520591DBC007DBEB2 /* AppDelegate.m */,
 				AE94BA8720591DBC007DBEB2 /* ViewController.h */,
@@ -154,19 +159,6 @@
 				AE94BAA420595CEC007DBEB2 /* LMKeyValueStore.mm */,
 			);
 			path = LMKeyValueStore;
-			sourceTree = "<group>";
-		};
-		AE94BAA620597930007DBEB2 /* LMKeyValueDemo */ = {
-			isa = PBXGroup;
-			children = (
-				AE6B438C205A0B4D0036C9AB /* LMKeyValueDemoTabVC.h */,
-				AE6B438D205A0B4D0036C9AB /* LMKeyValueDemoTabVC.m */,
-				AE6B438F205A0B8F0036C9AB /* LMKeyValueDemoTabVCModel.h */,
-				AE6B4390205A0B8F0036C9AB /* LMKeyValueDemoTabVCModel.m */,
-				AE6B4392205A0FFA0036C9AB /* LMRequest.h */,
-				AE6B4393205A0FFA0036C9AB /* LMRequest.m */,
-			);
-			path = LMKeyValueDemo;
 			sourceTree = "<group>";
 		};
 		EBB4BC887B4E0BBAC619584C /* Frameworks */ = {
@@ -347,7 +339,7 @@
 				AE94BA9D2059293B007DBEB2 /* LMWCDBOperation.mm in Sources */,
 				AE94BA8920591DBC007DBEB2 /* ViewController.m in Sources */,
 				AE94BA9420591DBC007DBEB2 /* main.m in Sources */,
-				AE6B4394205A0FFA0036C9AB /* LMRequest.m in Sources */,
+				AEDE505C205F81E9007BA78E /* LMRequest.m in Sources */,
 				AE94BAA220595C7E007DBEB2 /* LMKeyValueItem.mm in Sources */,
 				AE94BA8620591DBC007DBEB2 /* AppDelegate.m in Sources */,
 			);

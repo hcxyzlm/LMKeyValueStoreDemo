@@ -12,7 +12,7 @@
 #if DEBUG
 #define LMLog(...) NSLog(@"LMKeyValueStore: %@", [NSString stringWithFormat:__VA_ARGS__]);
 #else
-#define RMStoreLog(...)
+#define LMLog(...)
 #endif
 
 #endif /* LMLog_h */
