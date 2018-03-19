@@ -9,7 +9,7 @@ Pod::Spec.new do |s|
   s.author       = { "zhuo" => "hcxyzlm@126.com" }
   s.platform     = :ios, "7.0"
   s.source       = { :git => "https://github.com/hcxyzlm/LMKeyValueStoreDemo.git", :tag => "v1.0.0" }
-  s.source_files = "LMKeyValueStore", "LMKeyValueStore/*.{h,m}"
+  s.source_files = "LMKeyValueStore/*.{h,m}"
   #s.public_header_files = "RHKeyValueStore/*.h"
   s.framework    = "Foundation"
   s.requires_arc = true
