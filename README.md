@@ -44,7 +44,7 @@ LMKeyValueStore *store = [[LMKeyValueStore alloc] initDBWithName:@"test.db"];
 
 ## 封装wcdb操作类
  为了隔离c++的代码，不让引用wcdb引用的文件变成mm文件，特地封装了一个wcdb类，进行简单的数据库操作
-接口都封装在LMWCDBOperation，然后更为复杂的操作逻辑建议放在一个分类里面做更为合适
+接口都封装在LMWCDBOperation，然后更为复杂的数据库操作逻辑建议放在一个分类里面做更为合适
 
 ### 使用教程
 ```objc
@@ -55,17 +55,21 @@ LMKeyValueStore *store = [[LMKeyValueStore alloc] initDBWithName:@"test.db"];
     item.itemObject = @"abc";
     item.createdTime = [NSDate date];
     
+    //create
+    if (![storeHelper isTableExists:tableName]) {
+        [storeHelper createTableAndIndexesOfName:tableName withClass:[LMKeyValueItem class]];
+    }
+    
     // insert
     [storeHelper insertObject:item into:tableName];
     
     // select
-    LMKeyValueItem *result = [storeHelper getOneObjectOfClass:[LMKeyValueItem class] fromTable:tableName bandingColumnName:@"id" realID:item.itemId];
+    LLMKeyValueItem *result = [storeHelper getOneObjectOfClass:[LMKeyValueItem class] fromTable:tableName primaryKeyName:@"id" primaryKey:item.itemId];
     
     // modification
     item.itemObject = @"def";
-    // bandingColumnName为oc的mm文件绑定到数据库的字段
-    [storeHelper updateObjectInTable:tableName withObject:item bandingColumnName:@"id" realID:item.itemId];
+    [storeHelper updateObjectInTable:tableName withObject:item primaryKeyName:@"id" primaryKey:item.itemId];
     
     // delete
-    [storeHelper deleteObjectFromTable:tableName bandingColumnName:@"id" realID:item.itemId];
+    [storeHelper deleteObjectFromTable:tableName primaryKeyName:@"id" primaryKey:item.itemId];
 ```
