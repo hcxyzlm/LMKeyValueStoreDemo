@@ -62,19 +62,31 @@
     item.itemObject = @"abc";
     item.createdTime = [NSDate date];
     
+    //create
+    if (![storeHelper isTableExists:tableName]) {
+        [storeHelper createTableAndIndexesOfName:tableName withClass:[LMKeyValueItem class]];
+    }
     // insert
     [storeHelper insertObject:item into:tableName];
     
     // select
-    LMKeyValueItem *result = [storeHelper getOneObjectOfClass:[LMKeyValueItem class] fromTable:tableName bandingColumnName:@"id" realID:item.itemId];
+    LMKeyValueItem *result = [storeHelper getOneObjectOfClass:[LMKeyValueItem class] fromTable:tableName primaryKeyName:@"id" primaryKey:item.itemId];
+    
+    XCTAssertTrue([result.itemId isEqualToString:item.itemId]);
     
     // modification
     item.itemObject = @"def";
-    // bandingColumnName为oc的mm文件绑定到数据库的字段
-    [storeHelper updateObjectInTable:tableName withObject:item bandingColumnName:@"id" realID:item.itemId];
+    [storeHelper updateObjectInTable:tableName withObject:item primaryKeyName:@"id" primaryKey:item.itemId];
+    result = [storeHelper getOneObjectOfClass:[LMKeyValueItem class] fromTable:tableName primaryKeyName:@"id" primaryKey:item.itemId];
+    
+    XCTAssertNotEqual(result.itemObject, item.itemObject);
     
     // delete
-    [storeHelper deleteObjectFromTable:tableName bandingColumnName:@"id" realID:item.itemId];
+    [storeHelper deleteObjectFromTable:tableName primaryKeyName:@"id" primaryKey:item.itemId];
+    
+    result = [storeHelper getOneObjectOfClass:[LMKeyValueItem class] fromTable:tableName primaryKeyName:@"id" primaryKey:item.itemId];
+    
+    XCTAssertNil(result);
 }
 
 - (void)testPerformanceExample {
