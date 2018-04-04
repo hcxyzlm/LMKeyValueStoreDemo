@@ -1,4 +1,5 @@
 
+WCDB的二次封装面向对象操作项目，隔离c++文件
 LMKeyValueStore demo 有问题，有疑问欢迎加QQ：601113614
 
 LMKeyValueStore是基于WCDB databas一套缓存框工具。支持网络json缓存
