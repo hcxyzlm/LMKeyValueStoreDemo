@@ -11,7 +11,16 @@
 #import "LMLog.h"
 #import <WCDB/WCDB.h>
 #import "LMKeyValueItem.h"
-#import "LMKeyValueItem+WCTTableCoding.h"
+
+
+@interface LMKeyValueItem (WCTTableCoding) <WCTTableCoding>
+
+WCDB_PROPERTY(itemId)
+WCDB_PROPERTY(itemObject)
+WCDB_PROPERTY(createdTime)
+
+@end
+
 
 @interface LMKeyValueStore ()
 @property (nonatomic, strong) LMWCDBOperation *dbOperation; //数据库句柄

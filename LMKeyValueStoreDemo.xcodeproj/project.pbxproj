@@ -57,7 +57,6 @@
 		AE94BA9C2059293B007DBEB2 /* LMWCDBOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LMWCDBOperation.h; sourceTree = "<group>"; };
 		AE94BA9E20592BF0007DBEB2 /* LMLog.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LMLog.h; sourceTree = "<group>"; };
 		AE94BA9F20595C7D007DBEB2 /* LMKeyValueItem.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = LMKeyValueItem.mm; sourceTree = "<group>"; };
-		AE94BAA020595C7D007DBEB2 /* LMKeyValueItem+WCTTableCoding.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "LMKeyValueItem+WCTTableCoding.h"; sourceTree = "<group>"; };
 		AE94BAA120595C7E007DBEB2 /* LMKeyValueItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LMKeyValueItem.h; sourceTree = "<group>"; };
 		AE94BAA320595CEC007DBEB2 /* LMKeyValueStore.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LMKeyValueStore.h; sourceTree = "<group>"; };
 		AE94BAA420595CEC007DBEB2 /* LMKeyValueStore.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = LMKeyValueStore.mm; sourceTree = "<group>"; };
@@ -153,7 +152,6 @@
 				AE94BA9B2059293A007DBEB2 /* LMWCDBOperation.mm */,
 				AE94BAA120595C7E007DBEB2 /* LMKeyValueItem.h */,
 				AE94BA9F20595C7D007DBEB2 /* LMKeyValueItem.mm */,
-				AE94BAA020595C7D007DBEB2 /* LMKeyValueItem+WCTTableCoding.h */,
 				AE94BA9E20592BF0007DBEB2 /* LMLog.h */,
 				AE94BAA320595CEC007DBEB2 /* LMKeyValueStore.h */,
 				AE94BAA420595CEC007DBEB2 /* LMKeyValueStore.mm */,
@@ -198,8 +196,6 @@
 				AE94BA7D20591DBC007DBEB2 /* Sources */,
 				AE94BA7E20591DBC007DBEB2 /* Frameworks */,
 				AE94BA7F20591DBC007DBEB2 /* Resources */,
-				29722071067CA4FF2B4FF745 /* [CP] Embed Pods Frameworks */,
-				F35BC8054F8599052C2B0B5E /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -270,21 +266,6 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		29722071067CA4FF2B4FF745 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-LMKeyValueStoreDemo/Pods-LMKeyValueStoreDemo-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		6A8FEC0E8D483DCDFADA617F /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -301,21 +282,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		F35BC8054F8599052C2B0B5E /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-LMKeyValueStoreDemo/Pods-LMKeyValueStoreDemo-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */

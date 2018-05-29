@@ -7,7 +7,6 @@
 
 #import "LMKeyValueItem.h"
 #import <WCDB/WCDB.h>
-#import "LMKeyValueItem+WCTTableCoding.h"
 
 @implementation LMKeyValueItem
 
