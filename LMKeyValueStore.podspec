@@ -14,5 +14,6 @@ Pod::Spec.new do |s|
   s.framework    = "Foundation"
   s.requires_arc = true
   s.dependency "WCDB", "~> 1.0.4"
+  wcdb.libraries = "c++"
 
 end
