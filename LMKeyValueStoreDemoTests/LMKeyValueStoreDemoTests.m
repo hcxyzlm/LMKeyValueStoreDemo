@@ -31,7 +31,6 @@
     // This is an example of a functional test case.
     // Use XCTAssert and related functions to verify your tests produce the correct results.
     
-    // 不存在会自动创建一个新的
     LMKeyValueStore *store = [[LMKeyValueStore alloc] initDBWithName:@"test.db"];
     [store createTableWithName:@"test_table"];
     

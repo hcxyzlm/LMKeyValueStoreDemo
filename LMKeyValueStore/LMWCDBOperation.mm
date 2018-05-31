@@ -72,7 +72,7 @@
 
 #pragma mark public
 
-- (BOOL)insertObject:(NSObject *)object
+- (BOOL)insertObject:(NSObject<WCTTableCoding> *)object
                 into:(NSString *)tableName {
     if (![object conformsToProtocol:@protocol(WCTTableCoding)]) {
         LMLog(@"error, class is not implementation WCTTableCoding protocol");
@@ -86,6 +86,23 @@
     }
     
     return  [self.dbDatabase insertObject:obj into:tableName];
+}
+
+- (BOOL)insertOrReplaceObject:(NSObject<WCTTableCoding> *)object
+                         into:(NSString *)tableName {
+    
+    if (![object conformsToProtocol:@protocol(WCTTableCoding)]) {
+        LMLog(@"error, class is not implementation WCTTableCoding protocol");
+        return NO;
+    }
+    
+    WCTObject *obj = (WCTObject *)object;
+    
+    if (![self.dbDatabase isTableExists:tableName]) {
+        [self.dbDatabase createTableAndIndexesOfName:tableName withClass:[obj class]];
+    }
+    
+    return  [self.dbDatabase insertOrReplaceObject:obj into:tableName];
 }
 
 #pragma mark - Get Object
@@ -110,7 +127,7 @@
 
 #pragma mark Update With Object
 
-- (BOOL)updateObjectInTable:(NSString *)tableName withObject:(NSObject *)object primaryKeyName:(NSString *)keyName primaryKey:(id)key {
+- (BOOL)updateObjectInTable:(NSString *)tableName withObject:(NSObject<WCTTableCoding> *)object primaryKeyName:(NSString *)keyName primaryKey:(id)key {
     if (!tableName.length || !keyName.length || !key) {
         LMLog(@"updateObjectInTable error, tableName  or primaryKeyName or primaryKey  is null");
         return NO;

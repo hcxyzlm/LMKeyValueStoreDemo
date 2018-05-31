@@ -10,6 +10,8 @@
 NS_ASSUME_NONNULL_BEGIN
 
 @class WCTDatabase;
+@protocol WCTTableCoding;
+
 @interface LMWCDBOperation : NSObject
 
 @property (nonatomic, strong, readonly) WCTDatabase *dbDatabase;
@@ -37,10 +39,16 @@ NS_ASSUME_NONNULL_BEGIN
  @param object 插入的模型
  @param tableName 表名
  */
-- (BOOL)insertObject:(NSObject *)object
+- (BOOL)insertObject:(NSObject<WCTTableCoding> *)object
                 into:(NSString *)tableName;
 
 
+/*
+ replace
+ **/
+
+- (BOOL)insertOrReplaceObject:(NSObject<WCTTableCoding> *)object
+                into:(NSString *)tableName;
 
 #pragma mark - Get Object
 /**
@@ -64,7 +72,7 @@ NS_ASSUME_NONNULL_BEGIN
  @param keyName 绑定的数据库参数
  @param key id类型只接受NSString和NSNumber类型，其他会报错
  */
-- (BOOL)updateObjectInTable:(NSString *)tableName withObject:(NSObject *)object primaryKeyName:(NSString *)keyName primaryKey:(id)key;
+- (BOOL)updateObjectInTable:(NSString *)tableName withObject:(NSObject<WCTTableCoding> *)object primaryKeyName:(NSString *)keyName primaryKey:(id)key;
 
 #pragma mark delete object
 
